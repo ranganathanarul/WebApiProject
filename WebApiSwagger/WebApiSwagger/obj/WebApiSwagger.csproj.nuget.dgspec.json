@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Personal Folder\\VisualStudio\\WebAPI\\WebApiSwagger\\WebApiSwagger\\WebApiSwagger.csproj": {}
+    "C:\\Personal Folder\\WebAPI_\\WebApiSwagger\\WebApiSwagger\\WebApiSwagger.csproj": {}
   },
   "projects": {
-    "C:\\Personal Folder\\VisualStudio\\WebAPI\\WebApiSwagger\\WebApiSwagger\\WebApiSwagger.csproj": {
+    "C:\\Personal Folder\\WebAPI_\\WebApiSwagger\\WebApiSwagger\\WebApiSwagger.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Personal Folder\\VisualStudio\\WebAPI\\WebApiSwagger\\WebApiSwagger\\WebApiSwagger.csproj",
+        "projectUniqueName": "C:\\Personal Folder\\WebAPI_\\WebApiSwagger\\WebApiSwagger\\WebApiSwagger.csproj",
         "projectName": "WebApiSwagger",
-        "projectPath": "C:\\Personal Folder\\VisualStudio\\WebAPI\\WebApiSwagger\\WebApiSwagger\\WebApiSwagger.csproj",
+        "projectPath": "C:\\Personal Folder\\WebAPI_\\WebApiSwagger\\WebApiSwagger\\WebApiSwagger.csproj",
         "packagesPath": "C:\\Users\\ranga\\.nuget\\packages\\",
-        "outputPath": "C:\\Personal Folder\\VisualStudio\\WebAPI\\WebApiSwagger\\WebApiSwagger\\obj\\",
+        "outputPath": "C:\\Personal Folder\\WebAPI_\\WebApiSwagger\\WebApiSwagger\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
