@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -10,6 +11,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WebApiSwagger.Middleware;
 
 namespace WebApiSwagger
 {
@@ -25,6 +27,8 @@ namespace WebApiSwagger
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            //Dependency Injection to register class
+            services.AddTransient<ExceptionMiddleware>();
             
             services.AddControllers();
             services.AddSwaggerGen(c =>
@@ -47,6 +51,27 @@ namespace WebApiSwagger
                 });
             }
 
+            //Map() method is used to map the middleware to a specific URL
+            app.Map("/ErrorValues", (app) => { });
+            app.Map("/Error", MapHandler);
+            app.UseMiddleware<ExceptionMiddleware>();
+
+            app.MapWhen(context => context.Request.Query.ContainsKey("Err"), HandleRequestWithQuery);
+
+            //app.Use(async (context, next) => {
+            //    Console.WriteLine("Before Request Placed");
+
+            //    await next();
+
+            //    Console.WriteLine("After Request Placed");
+
+            //});
+
+            //app.Run(async context => {
+            //    Console.WriteLine("Showing the Middleware.");
+            //    await context.Response.WriteAsync("Hello Ranganathan, Welcome to the middleware.");
+            //});
+
             app.UseRouting();
 
             app.UseAuthorization();
@@ -54,6 +79,25 @@ namespace WebApiSwagger
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+            });
+        }
+
+        private void HandleRequestWithQuery(IApplicationBuilder objapp)
+        {
+            //Use() method is used to insert a new middleware in the pipeline
+            objapp.Use(async (context,next) => {
+                Console.WriteLine("Error Message contains");
+                //next () method is used to pass the execution to the next middleware
+                await next();
+            });
+        }
+
+        private void MapHandler(IApplicationBuilder obj)
+        {
+            //Run() method is used to complete the middleware execution.
+            obj.Run(async context => {
+                Console.WriteLine("Error Method");
+                await context.Response.WriteAsync("Error Method");
             });
         }
     }
