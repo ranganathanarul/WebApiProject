@@ -36,3 +36,13 @@ Start up Class :
             //    await context.Response.WriteAsync("Hello Ranganathan, Welcome to the middleware.");
             //});
   
+ Dynamodb Learning .Net Core API 
+ 
+ # https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/CodeSamples.DotNet.html
+ # https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-6.0&tabs=visual-studio
+ 
+ 
+[DynamoDB.pdf](https://github.com/ranganathanarul/WebApiProject/files/9639216/DynamoDB.pdf)
+
+
+
