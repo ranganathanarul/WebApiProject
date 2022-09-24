@@ -44,5 +44,17 @@ Start up Class :
  
 [DynamoDB.pdf](https://github.com/ranganathanarul/WebApiProject/files/9639216/DynamoDB.pdf)
 
+Startup Class(Startup.cs)
+
+            //Dynamodb Credemntial Copying
+            var credentials = new BasicAWSCredentials("#######", "##############");
+            var config = new AmazonDynamoDBConfig()
+            {
+                RegionEndpoint=Amazon.RegionEndpoint.USEast1,
+            };
+            var dyClient = new AmazonDynamoDBClient(credentials, config);
+            services.AddSingleton<IAmazonDynamoDB>(dyClient);
+            services.AddScoped<IDynamoDBContext, DynamoDBContext>();
+
 
 
