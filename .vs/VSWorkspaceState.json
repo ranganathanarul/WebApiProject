@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\WebApiSwagger",
+    "\\WebApiSwagger\\WebApiSwagger"
   ],
-  "SelectedNode": "\\WebApiSwagger.sln",
+  "SelectedNode": "\\WebApiSwagger\\WebApiSwagger\\Startup.cs",
   "PreviewInSolutionExplorer": false
 }
