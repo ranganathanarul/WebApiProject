@@ -42,7 +42,7 @@ namespace WebApiSwagger
             });
 
             //Dynamodb Credemntial Copying
-            var credentials = new BasicAWSCredentials("AKIAYCF2MSFDX2D3EVF2", "YNYPYaajM55DNnHakxIPUydz1SPVYC9OjVOLZhbq");
+            var credentials = new BasicAWSCredentials("#######", "##############");
             var config = new AmazonDynamoDBConfig()
             {
                 RegionEndpoint=Amazon.RegionEndpoint.USEast1,
